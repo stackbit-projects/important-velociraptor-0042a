@@ -1,0 +1,54 @@
+preserveTaxonomyNames = "true"
+baseurl = "https://example.org/"
+languageCode = "en-us"
+title = "HUGO MyPortfolio Theme"
+theme = "myportfolio"
+themesDir = "themes"
+baseURL = ""
+publishDir = "public"
+
+[markup.goldmark.renderer]
+unsafe = true
+
+[params]
+custom_css = [ "custom.css" ]
+
+  [params.meta]
+  author = "<AUTHOR>"
+  description = "<DESCRIPTION>"
+  favicon = "favicon.ico"
+
+  [params.homepage]
+  sections = [ "home", "about", "services", "skills", "projects", "contact" ]
+
+  [params.navigation]
+  brand = "YOUR BRAND"
+
+    [params.navigation.links]
+    about = "ABOUT"
+    services = "SERVICES"
+    skills = "SKILLS"
+    contact = "CONTACT"
+
+      [[params.navigation.links.projects]]
+      section = "pro"
+      label = "PROFESSIONAL"
+
+      [[params.navigation.links.projects]]
+      section = "perso"
+      label = "PERSONAL"
+
+  [params.projects]
+  categories = [ "pro", "perso" ]
+  sections_order = "title"
+  sections_order_reverse = false
+  posts_order = "date"
+  posts_order_reverse = true
+  date_format = "Jan-2006"
+  nb_columns = "3"
+  nb_columns_small = "2"
+
+  [params.page404]
+  text = "OOPS, PAGE NOT FOUND!"
+  background_image = "404.jpg"
+  button_text = "BACK HOME"
